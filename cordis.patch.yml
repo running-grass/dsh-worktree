@@ -1,0 +1,12 @@
+# The dsh-worktree bundle patch: the git-worktree host service and its
+# `worktree` Remote namespace.
+#
+# `worktreesRoot` is omitted on purpose: the plugin defaults it to
+# `$DSH_HOME/worktrees`, so a deployment that wants another location adds the
+# key here rather than inheriting a path this file guessed.
+- insert:
+    - id: worktree
+      name: dsh-worktree
+      config:
+        timeoutMs: 30000
+        outputMaxBytes: 8388608
